@@ -1,0 +1,88 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoEmotion - Real-Time Emotion Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="neon-text">REAL-TIME EMOTION DETECTION</h1>
+        </header>
+        
+        <main>
+            <div class="detection-container">
+                <div class="video-container neon-border-blue">
+                    <video id="video" autoplay muted></video>
+                    <canvas id="overlay" class="overlay"></canvas>
+                </div>
+                
+                <div class="emotion-container">
+                    <div class="primary-emotion neon-border-purple">
+                        <div id="emotion-emoji">😊</div>
+                        <div id="primary-emotion" class="neon-text">Happy</div>
+                    </div>
+                    
+                    <div class="emotion-metrics neon-border-purple">
+                        <div class="emotion-metric">
+                            <span class="emotion-label neon-text">Angry</span>
+                            <div class="emotion-bar-container">
+                                <div id="angry-bar" class="emotion-bar"></div>
+                            </div>
+                        </div>
+                        <div class="emotion-metric">
+                            <span class="emotion-label neon-text">Confused</span>
+                            <div class="emotion-bar-container">
+                                <div id="confused-bar" class="emotion-bar"></div>
+                            </div>
+                        </div>
+                        <div class="emotion-metric">
+                            <span class="emotion-label neon-text">Happy</span>
+                            <div class="emotion-bar-container">
+                                <div id="happy-bar" class="emotion-bar"></div>
+                            </div>
+                        </div>
+                        <div class="emotion-metric">
+                            <span class="emotion-label neon-text">Sad</span>
+                            <div class="emotion-bar-container">
+                                <div id="sad-bar" class="emotion-bar"></div>
+                            </div>
+                        </div>
+                        <div class="emotion-metric">
+                            <span class="emotion-label neon-text">Surprise</span>
+                            <div class="emotion-bar-container">
+                                <div id="surprise-bar" class="emotion-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="controls neon-border-blue">
+                <button id="start-btn" class="neon-button">START DETECTION</button>
+                <button id="stop-btn" class="neon-button">STOP DETECTION</button>
+                <div class="status">
+                    <span id="status-indicator"></span>
+                    <span id="status-text" class="neon-text">Ready to detect</span>
+                </div>
+            </div>
+            
+            <div class="text-analysis neon-border-purple">
+                <h2 class="neon-text">Text Emotion Analysis</h2>
+                <textarea id="text-input" placeholder="Type something to analyze the emotional content..."></textarea>
+                <button id="analyze-text-btn" class="neon-button">ANALYZE TEXT</button>
+                <div id="text-result" class="neon-text"></div>
+            </div>
+        </main>
+        
+        <footer>
+            <p class="neon-text">NeoEmotion Detection System v2.0</p>
+        </footer>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
